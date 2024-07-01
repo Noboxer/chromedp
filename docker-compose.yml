@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  chrome-headless:
+    image: "chromedp/headless-shell"
+    ports:
+      - "9222:9222"
+
+  example-chromedp-remote:
+    build:
+      context: .
+    network_mode: "service:chrome-headless"
