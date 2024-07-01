@@ -4,6 +4,7 @@ FROM chromedp/headless-shell
 RUN apt-get update && apt-get install -y procps
 
 EXPOSE 9222
+EXPOSE 9223
 
 # Set shared memory size to 2GB
 # RUN mkdir -p /dev/shm && mount -t tmpfs -o size=2G tmpfs /dev/shm
