@@ -1,10 +1,7 @@
 FROM chromedp/headless-shell
 
-# Install procps to get the sysctl command
+# Install procps to get the sysctl command (optional if needed)
 RUN apt-get update && apt-get install -y procps
-
-# Increase inotify watch limits
-RUN echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf && sysctl -p
 
 EXPOSE 9222
 
